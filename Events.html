@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="events.css">
+    <title>Upcoming Events</title>
+</head>
+<body>
+
+    <header id="navigation">
+        
+        <nav>
+            <ul>
+                <li><a href="SouljasAtl.html">Home</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="support.html">Support Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><img src="" alt=""></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <header>
+        <h1>Upcoming Events</h1>
+    </header>
+
+    <main>
+        <section class="calendar">
+           
+                <h1>Calendar</h1>
+                <div class="box">
+                  <div class="container">
+                    <div id="dycalendar"></div>
+                  </div>
+                </div>
+             
+        </section>
+
+        <section class="featured-event">
+            <h2>Featured Event</h2>
+            <div class="event-details">
+                <h3>Major Upcoming Event Title</h3>
+                <p>Date: [Event Date]</p>
+                <p>Description: A brief description of the event.</p>
+                <div class="cta-buttons">
+                    <button onclick="location.href='event-details.html'">More Info</button>
+                    <button onclick="location.href='purchase-tickets.html'">Purchase Tickets</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+          <!-- lets see if the card slideshows can fit here -->
+
+          <div class="container2">
+            <div class="card">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="slideOne.png" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="Slide2.png" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="Slide3.png" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                </div>
+                <div class="description">
+                    <h3>Event 1</h3>
+                    <p>This is a description for the first card's slideshow.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="image4.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="image5.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="image6.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                </div>
+                <div class="description">
+                    <h3>Event 2</h3>
+                    <p>This is a description for the second card's slideshow.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="image7.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="image8.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="image9.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+                </div>
+                <div class="description">
+                    <h3>Event 3</h3>
+                    <p>This is a description for the third card's slideshow.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+            <div class="testimonials">
+                <h3>Testimonials</h3>
+                <blockquote>
+                    <p>"It was an amazing experience!" - Participant A</p>
+                </blockquote>
+                <blockquote>
+                    <p>"I loved every moment!" - Participant B</p>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+<!-- seeing if carde slideshow works -->
+ 
+
+<!-- <div class="container2">
+    <div class="card">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="slideOne.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Slide2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Slide3.png" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+        <div class="description">
+            <h3>Card 1 Title</h3>
+            <p>This is a description for the first card's slideshow.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="image5.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="image6.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+        <div class="description">
+            <h3>Card 2 Title</h3>
+            <p>This is a description for the second card's slideshow.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image7.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="image8.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="image9.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+        </div>
+        <div class="description">
+            <h3>Card 3 Title</h3>
+            <p>This is a description for the third card's slideshow.</p>
+        </div>
+    </div>
+</div> -->
+    
+      
+<!-- end card slideshow -->
+    <footer>
+        <p>&copy; 2024 Souljas ATL. All rights reserved.</p>
+    </footer>
+
+    <script src="calendar.js"></script>
+
+</body>
+</html>
