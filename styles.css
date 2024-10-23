@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #fff7d5;
 }
 
 header {
@@ -34,6 +35,8 @@ header {
     margin-right: 20px; /* Space between logo and tagline */
 }
 
+/* all nav stuff */
+
 #navigation{
     background-color: #008704;
 }
@@ -54,6 +57,101 @@ nav ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
+
+
+
+
+/* all nav stuff */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a7600;
+    padding: 10px 20px;
+    position: relative;
+    margin-top: -20px;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+}
+
+.menu-icon {
+    display: none; /* Hide the menu icon by default */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Desktop styles */
+.nav-links {
+    
+    display: flex; /* Display links horizontally */
+    gap: 20px; /* Space between links */
+    z-index: 5;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .nav-links {       
+        display: none; /* Hide the links by default */
+        flex-direction: column;
+        position: fixed; /* Position fixed to slide in */
+        top: 0;
+        right: -250px; /* Start off-screen */
+        background-color: #0a7600;
+        height: 100%; /* Full height */
+        width: 230px; /* Set a width for the menu */
+        padding-top: 8px; /* Space for logo */
+        transition: right 2.9s ease; /* Smooth transition */
+        transition: right 2.9s ease-in-out; /* Smooth transition */
+    }
+
+    .nav-links.active {
+        margin-top: 9.8%;
+        border: 2px solid white;
+        font-family: "Ubuntu", sans-serif;
+        opacity: 0.9;
+        background-color: #0a7600;
+        display: flex; /* Show links when active */
+        right: 0; /* Slide in from the right */
+    }
+
+    .nav-links li {
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(254, 255, 176));
+        border: 2px solid white;
+        padding: 10px 10px; /* Space between links */
+    }
+
+    .close-icon {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        padding: 20px;
+        position: absolute; /* Position it in the top right corner */
+        right: 0;
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on mobile */
+        margin-left: 95%;
+    }
+
+    .close-icon {
+        display: block; /* Show the close icon only on mobile */
+    }
+}
+
+/* Hide the close icon on desktop */
+@media only screen and (min-width: 769px) {
+    .close-icon {
+        display: none; 
+    }
+    }
 
 
 .cta-button {
@@ -206,11 +304,12 @@ h2 {
 }
 
 .event-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-image: url("bacground.png");
+    border: 4px solid #ffcc00;
     border-radius: 8px;
     overflow: hidden;
-    width: calc(25% - 15px); /* Four cards in a row with spacing */
+    width: calc(25%); /* Four cards in a row with spacing */
+    min-width: 34%;
     margin: 10px; /* Spacing between cards */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -226,25 +325,30 @@ h2 {
 }
 
 .event-card h3 {
+    font-family: "Ubuntu", sans-serif;
     margin: 10px 0;
     text-align: center;
+    color: #ffffff;
 }
 
 .event-card p {
+    font-family: "Ubuntu", sans-serif;
     padding: 0 10px;
     text-align: center;
-    color: #555;
+    color: #ffffff;
 }
 
 .cta-button {
     display: block;
     margin: 15px auto;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-image: linear-gradient(to right, rgb(0, 125, 15) , rgb(4, 255, 0));
     color: white;
     text-decoration: none;
     text-align: center;
+    border: 2px solid #ffcc00;
     border-radius: 5px;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .cta-button:hover {
@@ -259,4 +363,91 @@ h2 {
 #get-involved{
     border-style: outset;
     margin-bottom: 5%;
+}
+
+
+/* text overlay */
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+}
+
+.banner-image {
+    width: 100%;
+    height: auto; /* Keeps the aspect ratio */
+}
+
+.overlay {
+    width: 40%; /* Ensure the container takes full width */
+    max-width: 600px; /* Set a max width to avoid stretching too wide */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow-wrap: break-word; /* Break long words to prevent overflow */
+    word-wrap: break-word; /* Older method for word wrapping */
+    hyphens: auto; /* Enable hyphenation */
+    line-height: 1.5; /* Improve readability */
+    font-size: 1em; /* Set a responsive font size */
+    position: absolute;
+    top: 10%;
+    right: 20px; /* Distance from the right */
+    transform: translateY(-110%); /* Center vertically */
+    background-color: rgba(255, 255, 255, 0.7); /* White background with transparency */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin-bottom: 40%;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    margin: 5px 0 0;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    #navigation {
+        background-size: cover; /* Cover the entire area */
+        height: 200px; /* Set a specific height for mobile */
+        object-fit: cover; /* Ensure the image covers the area */
+    }
+    .hero-banner {
+        background-size: cover; /* Cover the entire area */
+        height: 200px; /* Set a specific height for mobile */
+        object-fit: cover; /* Ensure the image covers the area */
+    }
+
+    .banner {
+        background-size: cover; /* Cover the entire area */
+        height: 200px; /* Set a specific height for mobile */
+        object-fit: cover; /* Ensure the image covers the area */
+    }
+
+    .overlay {
+
+        transform: translateY(-145%);
+        width: 100%; /* Ensure the container takes full width */
+        max-width: 300px; /* Set a max width to avoid stretching too wide */
+        margin: 0 auto; /* Center the container */
+        padding: 2px; /* Add some padding */
+        box-sizing: border-box; /* Include padding in width calculation */
+        overflow-wrap: break-word; /* Break long words to prevent overflow */
+        word-wrap: break-word; /* Older method for word wrapping */
+        hyphens: auto; /* Enable hyphenation */
+        line-height: 1.5; /* Improve readability */
+        width: 100%;
+        /* height: 50%; */
+        background-size: 50%; /* Cover the entire area */
+        height: 75px; /* Set a specific height for mobile */
+        object-fit: cover; /* Ensure the image covers the area */
+        font-size: 0.7em; /* Slightly reduce font size on small screens */
+    }
+
+  
 }
