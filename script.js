@@ -42,4 +42,17 @@ setInterval(() => {
 
 
 
-// calendar
+// nav menu
+
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.getElementById('nav-links');
+const closeIcon = document.getElementById('close-icon');
+
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Toggle the active class
+});
+
+closeIcon.addEventListener('click', () => {
+    navLinks.classList.remove('active'); // Remove the active class to close the menu
+});
+
